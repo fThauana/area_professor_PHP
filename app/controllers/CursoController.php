@@ -47,7 +47,6 @@ class CursoController extends BaseController {
             }
         }
 
-        // Busca a lista de alunos se o usuário for o professor do curso
         $alunos_inscritos = [];
         if ($_SESSION['perfil'] === 'professor' && $curso['professor_id'] == $_SESSION['usuario_id']) {
             $inscricaoModel = new Inscricao();
@@ -167,9 +166,6 @@ class CursoController extends BaseController {
         exit;
     }
 
-    /**
-     * Permite que um professor remova um aluno de sua turma.
-     */
     public function removeAluno(int $curso_id, int $aluno_id) {
         $this->checkProfessor();
 

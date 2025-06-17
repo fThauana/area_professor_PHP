@@ -7,9 +7,6 @@ abstract class BaseController {
         $this->pdo = $pdo;
     }
 
-    /**
-     * Garante que o usuário esteja autenticado. Redireciona para o login caso não esteja.
-     */
     protected function checkAuth(): void {
         if (!isset($_SESSION['usuario_id'])) {
             $_SESSION['error_message'] = 'Você precisa estar logado para acessar esta página.';
