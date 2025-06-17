@@ -25,7 +25,7 @@ class MaterialController extends BaseController {
             'alunos_inscritos' => $alunos_inscritos,
             'alunos_atribuidos' => [] // Vazio na criação
         ];
-        require __DIR__ . '/../views/materiais/form.php';
+        require __DIR__ . '/../view/materiais/form.php';
     }
 
     public function store() {
@@ -87,7 +87,7 @@ class MaterialController extends BaseController {
             'alunos_inscritos' => $alunos_inscritos,
             'alunos_atribuidos' => $alunos_atribuidos
         ];
-        require __DIR__ . '/../views/materiais/form.php';
+        require __DIR__ . '/../view/materiais/form.php';
     }
 
     public function update(int $id) {

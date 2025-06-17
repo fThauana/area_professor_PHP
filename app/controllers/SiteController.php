@@ -24,14 +24,14 @@ class SiteController extends BaseController {
             'cursos_recentes' => $cursoModel->getLatest($this->pdo, 3)
         ];
 
-        require __DIR__ . '/../views/site/home.php';
+        require __DIR__ . '/../view/site/home.php';
     }
 
     /**
      * Carrega a página "Sobre".
      */
     public function sobre() {
-        require __DIR__ . '/../views/site/sobre.php';
+        require __DIR__ . '/../view/site/sobre.php';
     }
 
     /**
@@ -40,6 +40,6 @@ class SiteController extends BaseController {
     public function listaCursosPublicos() {
         $cursoModel = new Curso();
         $cursos = $cursoModel->getAll($this->pdo);
-        require __DIR__ . '/../views/site/lista_cursos.php';
+        require __DIR__ . '/../view/site/lista_cursos.php';
     }
 }

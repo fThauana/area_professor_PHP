@@ -3,7 +3,7 @@
 class AuthController extends BaseController {
 
     public function login() {
-        require __DIR__ . '/../views/auth/login.php';
+        require __DIR__ . '/../view/auth/login.php';
     }
 
     public function processLogin() {
@@ -43,7 +43,7 @@ class AuthController extends BaseController {
     }
 
     public function showRecoverForm() {
-        require __DIR__ . '/../views/auth/recover.php';
+        require __DIR__ . '/../view/auth/recover.php';
     }
 
     public function processRecovery() {

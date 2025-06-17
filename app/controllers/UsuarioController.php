@@ -3,7 +3,7 @@
 class UsuarioController extends BaseController {
 
     public function create() {
-        require __DIR__ . '/../views/usuarios/register.php';
+        require __DIR__ . '/../view/usuarios/register.php';
     }
 
     public function store() {

@@ -5,13 +5,13 @@ class CursoController extends BaseController {
     public function index() {
         $cursoModel = new Curso();
         $cursos = $cursoModel->getAll($this->pdo);
-        require __DIR__ . '/../views/site/lista_cursos.php';
+        require __DIR__ . '/../view/site/lista_cursos.php';
     }
 
     public function create() {
         $this->checkProfessor();
         $viewData = ['titulo_pagina' => 'Criar Novo Curso', 'action' => BASE_URL . '/cursos/store', 'curso' => null, 'is_edit' => false];
-        require __DIR__ . '/../views/cursos/form.php';
+        require __DIR__ . '/../view/cursos/form.php';
     }
 
     public function store() {
@@ -54,7 +54,7 @@ class CursoController extends BaseController {
             $alunos_inscritos = $inscricaoModel->findUsersByCourse($this->pdo, $id);
         }
         
-        require __DIR__ . '/../views/cursos/show.php';
+        require __DIR__ . '/../view/cursos/show.php';
     }
 
     public function edit(int $id) {
@@ -69,7 +69,7 @@ class CursoController extends BaseController {
         }
 
         $viewData = ['titulo_pagina' => 'Editar Curso', 'action' => BASE_URL . '/cursos/update/' . $id, 'curso' => $curso, 'is_edit' => true];
-        require __DIR__ . '/../views/cursos/form.php';
+        require __DIR__ . '/../view/cursos/form.php';
     }
 
     public function update(int $id) {
