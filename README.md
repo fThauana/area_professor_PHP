@@ -50,5 +50,3 @@ Se este usuário não existir, você pode criá-lo via registro e, em seguida, a
 * `config`: Arquivos de configuração, como a conexão com o banco de dados.
 * `helpers`: Funções auxiliares, como CSRF token generation.
 * `public`: O diretório acessível publicamente, contendo CSS, JavaScript e o `index.php` (ponto de entrada).
-
-```
